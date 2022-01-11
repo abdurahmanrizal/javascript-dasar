@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function with Return</title>
+</head>
+<body>
+    <script>
+        function sayHello(firstName, lastName) {
+            const say = `Hello ${firstName} ${lastName}`
+            return say
+        }
+        const helloSay = sayHello('Abdurahman', 'Argoebie')
+        document.writeln(`<p>${helloSay}</p>`)
+
+        function finalValue(value) {
+            if(value > 90) {
+                return 'A';
+            }else if(value > 80) {
+                return 'B';
+            }else if(value > 70) {
+                return 'C';
+            }else if(value > 60) {
+                return 'D';
+            }else {
+                return 'E';
+            }
+        }
+        const resultValue = finalValue(95)
+        document.writeln(`<p>Hasil akhir adalah ${resultValue}</p>`)
+
+        function isContains(array, searchValue) {
+            for (const element of array) {
+                if(element === searchValue) {
+                    return true
+                }
+            }
+            return false
+        }
+        const arrayValue = [1,2,3,4,5,6,7,8,9,10];
+        const valueSearch = 100
+        document.writeln(`<p>${isContains(arrayValue, valueSearch)}</p>`)
+    </script>
+</body>
+</html>
