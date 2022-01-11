@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator Logika Non Boolean</title>
+</head>
+<body>
+    <script>
+        <!--   Operator Boolean OR ( || )     -->
+        // Membaca nilai truthy dari kiri ke kanan
+        // Jika nilai truthy di kiri dan nilai falsy di kanan maka yang diambil adalah nilai yang di kiri
+        // Jika nilai truthy di kanan dan nilai falsy di kiri maka yang diambil adalah nilai yang di kanan
+        // Jika keduanya nilainya falsy maka ambil nilai yang di kanan
+        console.info("Hello" || "")
+        console.info("" || "Abdurahman")
+        console.info("" || null)
+
+        // Operator Boolean AND ( && )
+        // Membaca nilai falsy dari kiri ke kanan
+        // Jika nilai falsy di kiri dan nilai truthy di kanan maka yang diambil adalah nilai yang di kiri
+        // Jika nilai falsy di kanan dan nilai truthy di kiri maka yang diambil adalah nilai yang di kanan
+        // Jika keduanya nilainya truthy maka ambil nilai yang di kiri
+
+        console.info("Hello" && "")
+        console.info(undefined && "Abdurahman")
+        console.info(null && '')
+
+        // example with object with OR logic
+        const person = {
+            firstName: undefined,
+            lastName: 'Argoebie'
+        }
+
+        console.info(person.firstName || person.lastName)
+
+        // with AND Logic
+        console.info(person.firstName && person.lastName)
+    </script>
+</body>
+</html>
