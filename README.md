@@ -1,5 +1,5 @@
 ## Javascript Dasar
 
-#### Falsy Truthy
-#### Operator Logika Non Boolean
-#### Optional Chaining
+- Falsy Truthy
+- Operator Logika Non Boolean
+- Optional Chaining
