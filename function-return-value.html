@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Return Value</title>
+</head>
+<body>
+    <script>
+        function sayHello(name) {
+            document.writeln(`<p>Hello ${name}</p>`)
+        }
+
+        sayHello('Eko')
+
+        const say = sayHello
+
+        say('Abdurahman')
+
+        function giveMeName(callback) {
+            callback('Argoebie')
+        }
+
+        giveMeName(sayHello)
+
+    </script>
+</body>
+</html>

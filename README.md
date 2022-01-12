@@ -9,3 +9,7 @@
 - Function with Return
 - Function Optional Parameter
 - Function Default Parameter
+- Function Rest Parameter
+- Function Return Value
+- Anonymous Function
+- Function dalam Function
