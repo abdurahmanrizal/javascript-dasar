@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recursive Function</title>
+</head>
+<body>
+<script>
+    // with looping
+    function factorialLooping(value) {
+        let result = 1
+        for (let i = 1; i <= value; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+    console.info(factorialLooping(5))
+    console.info(1 * 2 * 3 * 4 * 5)
+
+    // with recursive
+    function factorialRecursive(value) {
+        if (value === 1) {
+            return 1
+        } else {
+            return value * factorialRecursive(value - 1)
+        }
+    }
+
+    // flow
+    // return 5 * factorialRecursive(4)
+    // return 5 * 4 * factorialRecursive(3)
+    // return 5 * 4 * 3 * factorialRecursive(2)
+    // return 5 * 4 * 3 * 2 * factorialRecursive(1)
+    // return 5 * 4 * 3 * 2 * 1
+
+    console.info(factorialRecursive(5))
+    console.info(1 * 2 * 3 * 4 * 5)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global Local Scope</title>
+</head>
+<body>
+<script>
+    // Global Scope
+    let counter = 0
+
+    function hitMe() {
+        // Local Scope
+        counter++
+    }
+
+    hitMe()
+    hitMe()
+    console.info(counter)
+
+    function first() {
+        let firstVariable = 'First'
+        console.info(firstVariable)
+    }
+
+    function second() {
+        let secondVariable = 'Second'
+        console.info(secondVariable)
+    }
+
+    first()
+    second()
+
+    //    error can access local scope
+    // console.info(firstVariable)
+    // console.info(secondVariable)
+
+    function globalFunction() {
+        let name = 'Abdurahman';
+        function localFunction() {
+            console.info(name)
+            const firstNestedVariable = 'nested variable'
+        }
+        localFunction()
+        // console.info(firstNestedVariable)
+    }
+
+    globalFunction()
+</script>
+</body>
+</html>

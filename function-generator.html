@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generator Function</title>
+</head>
+<body>
+<script>
+    function* createNames() {
+        yield "Abdurahman";
+        yield "Argoebie";
+    }
+
+    const names = createNames();
+
+    for (const name of names) {
+        console.log(name)
+    }
+
+    // eager
+    function buatGanjilArray(value) {
+        let result = [];
+        for (let i = 1; i <= value; i++) {
+            if (i % 2 === 1) {
+                console.info(`looping ke - ${i}`)
+                result.push(i)
+            }
+        }
+        return result
+    }
+
+    // lazy
+    function* buatGanjil(value) {
+        for (let i = 1; i <= value; i++) {
+            if (i % 2 === 1) {
+                console.info(`looping ke - ${i}`)
+                yield i;
+            }
+        }
+    }
+
+    const numbers = buatGanjil(100)
+
+    // for (const number of numbers) {
+    //     console.log(number)
+    // }
+
+    //   access one data for generator
+    console.info(numbers.next().value)
+    console.info(numbers.next().value)
+
+
+
+</script>
+</body>
+</html>

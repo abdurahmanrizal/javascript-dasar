@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow Function</title>
+</head>
+<body>
+<script>
+    <!--  arrow function -->
+    // const sayHello = (name) => {
+    //     console.info(`Hello ${name}`)
+    // }
+
+    // in arrow function, we cant block like this for the simple function
+    // const sayHello = (name) => console.info(`Hello ${name}`)
+
+    // in arrow function, we can use parenthess if one parameter
+    const sayHello = name => console.info(`Hello ${name}`)
+
+    // in arrow function, can use for parameter function cause arrow function like a anonymous function
+
+    function giveMeName(callback) {
+        callback('Max')
+    }
+    // with usually function
+    giveMeName(function(name) {
+        console.info(`Hello ${name}`)
+    })
+
+    // with arrow function
+    giveMeName(name => console.info(`Hello ${name}`))
+
+    sayHello('Abdurahman')
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Closure</title>
+</head>
+<body>
+<script>
+    function createAdd(value) {
+        const owner = 'Abdurahman'
+
+        function add(param) {
+            console.info(owner)
+            return value + param
+        }
+
+        return add
+    }
+
+    function createSubstract(value) {
+        const label = 'Pengurangan';
+
+        function substract(param) {
+            console.info(label)
+            return param - value
+        }
+
+        return substract
+    }
+
+    function createMultiply(value) {
+        const label = 'Perkalian'
+
+        function multiply(param) {
+            console.info(label)
+            return param * value
+        }
+
+        return multiply
+    }
+
+    const addTwo = createAdd(2)
+    // description flow this function like this
+    // function addTwo(2) {
+    //     console.info(owner)
+    //     return 2 + param
+    // }
+    console.info(addTwo(10))
+    console.info(addTwo(30))
+
+    const addTen = createAdd(10)
+    // description flow this function like this
+    // function addTen(10) {
+    //     console.info(owner)
+    //     return 2 + param
+    // }
+    console.info(addTen(22))
+    console.info(addTen(30))
+
+    const subsTwo = createSubstract(2)
+
+    console.info(subsTwo(10));
+    //    function substract(10) {
+    //    console.info(label)
+    //    return 10 - 2 => 8
+    //    }
+
+    const multiplyTen = createMultiply(10)
+    console.info(multiplyTen(2))
+    // function multiply(2) {
+    //     console.info(label)
+    //     return 2 * 10 => 20
+    // }
+</script>
+</body>
+</html>

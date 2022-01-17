@@ -13,3 +13,9 @@
 - Function Return Value
 - Anonymous Function
 - Function dalam Function
+- Function generator
+- Function recursive
+- Global Local Scope
+- Arrow Function
+- Closure
+- Object Method

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Method</title>
+</head>
+<body>
+<script>
+    <!--        if we have object like this-->
+    // we can add function in property object
+    const person = {
+        name: 'Abdurahman',
+        sayHello: function (name) {
+            console.info(`Hello ${name}`)
+        },
+        sayMyName: name => console.info(`Hello My Name is ${name}`)
+    }
+    // code below for call object function sayHello
+    person.sayHello('Abdurahman')
+    person.sayMyName('Steve')
+    //    if we havent function in object we can created at, like this
+    const personName = {
+        name: 'Mega'
+    }
+    personName.sayHello = name => console.info(`Hello ${name}`)
+    personName.sayHello('Mega')
+</script>
+</body>
+</html>
