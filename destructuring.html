@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Destructuring - JS</title>
+</head>
+<body>
+<script>
+    {
+        const names = ['Abdurahman', 'Arhan', 'Pratama', 'Adit', 'Mega']
+        const [firstName, middleName, lastName, ...others] = names
+
+        console.info(firstName)
+        console.info(middleName)
+        console.info(lastName)
+        console.info(others)
+    }
+
+    {
+        const person = {
+            firstName: 'Abdurahman',
+            lastName: 'Argoebie',
+            address: {
+                city: 'Semarang',
+                province: 'Central Java',
+                zipcode: 50138
+            },
+            hobby: 'coding',
+            channel: 'Real Man Universe'
+        }
+
+        const {firstName, lastName, address: {city, province, zipcode}, ...others} = person
+        console.info(firstName)
+        console.info(lastName)
+        console.info(city)
+        console.info(province)
+        console.info(zipcode)
+        console.info(others)
+    }
+    {
+        //    destructuring with function
+        const person = {
+            firstName: 'Abdurahman',
+            middleName: 'Rizal Shin',
+
+        }
+
+        // default value in destructuring object
+        function displayPerson({firstName: namaDepan, middleName: namaTengah, lastName: namaBelakang = 'Tae Yong'}) {
+            console.info(namaDepan)
+            console.info(namaTengah)
+            console.info(namaBelakang)
+        }
+
+        displayPerson(person)
+    }
+    {
+        // destructuring with array
+        function sum([first, second]) {
+            return first + second
+        }
+
+        console.info(sum([10, 20]))
+
+        const person = ['Abdurahman', 'Rizal'];
+
+        // default value in destructuring array
+        function displayPerson([firstName, middleName, lastName = 'Argoebie']) {
+            console.info(firstName)
+            console.info(middleName)
+            console.info(lastName)
+        }
+        displayPerson(person)
+
+    }
+
+
+</script>
+</body>
+</html>

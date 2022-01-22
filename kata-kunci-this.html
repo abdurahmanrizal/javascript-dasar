@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This Javascript</title>
+</head>
+<body>
+<script>
+    <!--  this in global scope window-->
+    // function sample() {
+    //     console.info(this)
+    // }
+    //
+    // sample()
+
+//    if this in object property inside on variable or something else
+    const person = {
+        name: 'Abdurahman',
+        sayHello: function(value) {
+            console.log(`Hello ${value}, my name is ${this.name}`)
+        }
+    }
+    person.sayHello('Nada')
+</script>
+</body>
+</html>

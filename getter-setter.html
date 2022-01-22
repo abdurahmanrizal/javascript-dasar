@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getter dan Setter</title>
+</head>
+<body>
+<script>
+    const person = {
+        firstName: 'Abdurahman',
+        lastName: 'Argoebie',
+        // with getter function
+        get fullName() {
+            return `${this.firstName} ${this.lastName}`
+        },
+        set fullName(value) {
+            const array = value.split(' ');
+            this.firstName = array[0]
+            this.lastName = array[1]
+        }
+        // use function
+        // fullName: function() {
+        //     return `${this.firstName} ${this.lastName}`
+        // }
+    }
+    // person.firstName = 'Abdullah'
+    // console.info(person.firstName)
+    // console.info(person.lastName)
+    // console.info(person.fullName)
+    // // console.info(person.fullName())
+    person.fullName = 'Abdurahman Argoebie'
+    console.table(person)
+    person.fullName = 'Richard Allison'
+    console.table(person)
+    person.fullName = 'Diablo Junior'
+    console.table(person)
+</script>
+</body>
+</html>

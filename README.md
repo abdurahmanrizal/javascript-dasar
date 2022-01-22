@@ -19,3 +19,10 @@
 - Arrow Function
 - Closure
 - Object Method
+- This
+- Object Arrow Function
+- Getter Setter
+- Masalah Variable Var
+- Destructuring
+- Strict Mode
+- Debugger

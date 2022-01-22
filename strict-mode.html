@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Strict Mode</title>
+</head>
+<body>
+<script>
+    <!--    without use strict mode javascript's code is sloppy mode-->
+    // sloppy mode
+    function sloppyMode() {
+        const person = {
+            firstName: 'Abdurahman'
+        }
+        with (person) {
+            console.info(firstName)
+        }
+    }
+
+    sloppyMode()
+
+    //    strict Mode
+    function strictMode() {
+        'use strict'
+        const person = {
+            firstName: 'Rahman'
+        }
+        // error if we use strict mode cant not use with
+        // rules if we use strict mode
+        // 1. cant use variable var
+        // 2. cant use with statement
+        // 3.
+        with(person) {
+
+        }
+    }
+</script>
+</body>
+</html>
